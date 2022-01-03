@@ -1,0 +1,14 @@
+.slide {
+  opacity: 0;
+  text-align: left;
+  color: #fff;
+}
+.in {
+  opacity: 1;
+  transform: translateX(60%);
+  transition: all 0.75s ease;
+}
+.out {
+  opacity: 0;
+  transform: translateX(110%);
+}

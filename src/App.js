@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Container, Title } from '@mantine/core';
+import { Depth, SlideInItem } from './components';
+import { ReactComponent as Sun } from './images/sun.svg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Depth />
+      <Container size='lg' className='app__container'>
+        <div className='air-container'>
+          <Title className='thalassophobia-title' order={1}>
+            Thalassophobia
+          </Title>
+          <Sun className='sun' />
+        </div>
+        <div className='svg-container'>
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100'>
+            <path
+              fill='#0edbd4'
+              fillOpacity='1'
+              d='M0,60L26.7,53.3C53.3,47,107,33,160,25C213.3,17,267,13,320,25C373.3,37,427,63,480,63.3C533.3,63,587,37,640,35C693.3,33,747,57,800,65C853.3,73,907,67,960,53.3C1013.3,40,1067,20,1120,20C1173.3,20,1227,40,1280,48.3C1333.3,57,1387,53,1440,46.7C1493.3,40,1547,30,1600,33.3C1653.3,37,1707,53,1760,61.7C1813.3,70,1867,70,1920,60C1973.3,50,2027,30,2080,30C2133.3,30,2187,50,2240,61.7C2293.3,73,2347,77,2400,76.7C2453.3,77,2507,73,2560,71.7C2613.3,70,2667,70,2720,70C2773.3,70,2827,70,2880,61.7C2933.3,53,2987,37,3040,25C3093.3,13,3147,7,3200,5C3253.3,3,3307,7,3360,21.7C3413.3,37,3467,63,3520,71.7C3573.3,80,3627,70,3680,56.7C3733.3,43,3787,27,3813,18.3L3840,10L3840,100L3813.3,100C3786.7,100,3733,100,3680,100C3626.7,100,3573,100,3520,100C3466.7,100,3413,100,3360,100C3306.7,100,3253,100,3200,100C3146.7,100,3093,100,3040,100C2986.7,100,2933,100,2880,100C2826.7,100,2773,100,2720,100C2666.7,100,2613,100,2560,100C2506.7,100,2453,100,2400,100C2346.7,100,2293,100,2240,100C2186.7,100,2133,100,2080,100C2026.7,100,1973,100,1920,100C1866.7,100,1813,100,1760,100C1706.7,100,1653,100,1600,100C1546.7,100,1493,100,1440,100C1386.7,100,1333,100,1280,100C1226.7,100,1173,100,1120,100C1066.7,100,1013,100,960,100C906.7,100,853,100,800,100C746.7,100,693,100,640,100C586.7,100,533,100,480,100C426.7,100,373,100,320,100C266.7,100,213,100,160,100C106.7,100,53,100,27,100L0,100Z'
+            ></path>
+          </svg>
+        </div>
+        <SlideInItem />
+      </Container>
     </div>
   );
 }
